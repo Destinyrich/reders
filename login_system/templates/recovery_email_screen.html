@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recovery Email Input</title>
+</head>
+<body>
+    <h1>Enter Your Recovery Email</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label>Recovery Email:</label>
+        <input type="email" name="recovery_email" required>
+        <button type="submit">Next</button>
+    </form>
+</body>
+</html>

